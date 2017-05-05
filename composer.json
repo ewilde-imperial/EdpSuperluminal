@@ -1,5 +1,5 @@
 {
-    "name": "evandotpro/edp-superluminal",
+    "name": "bender/edp-superluminal",
     "description": "Modification of https://github.com/EvanDotPro/EdpSuperluminal to work with ZF3",
     "license": "BSD-3-Clause",
     "type": "library",
