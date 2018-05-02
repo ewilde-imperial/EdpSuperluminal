@@ -5,7 +5,8 @@
     "type": "library",
     "keywords": [
         "zendframework",
-        "performance"
+        "performance",
+        "zf3"
     ],
     "homepage": "https://github.com/ewilde-imperial/EdpSuperluminal",
     "authors": [
