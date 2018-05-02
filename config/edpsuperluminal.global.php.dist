@@ -1,0 +1,15 @@
+<?php
+
+$config = array(
+	'included' => array(
+		'Zend',
+		'Interop',
+		'Doctrine',
+		'Gedmo',
+	),
+	'excluded' => array(
+
+	),
+);
+
+return array('edp-superluminal' => $config);

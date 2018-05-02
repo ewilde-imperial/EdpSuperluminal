@@ -14,7 +14,7 @@ class ShouldCacheClassSpecificationFactory implements FactoryInterface
         'IsZf2BasedAutoloader',
         'IsCoreClass',
         // 'IsInteropClass',
-        
+
     );
 
     public function __construct($specificationClasses = null)
@@ -58,6 +58,7 @@ class ShouldCacheClassSpecificationFactory implements FactoryInterface
     public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null){
         $serviceLocator = $container->getServiceLocator();
         $specifications = array();
+        $config = $container->get('Config');
 
         foreach ($this->specificationClasses as $specificationClass) {
             $specificationClass = 'EdpSuperluminal\ShouldCacheClass\\' . $specificationClass;
@@ -66,7 +67,7 @@ class ShouldCacheClassSpecificationFactory implements FactoryInterface
                 throw new \Exception("The specification '{$specificationClass}' does not exist!");
             }
 
-            $specification = new $specificationClass();
+            $specification = new $specificationClass($config);
 
             if (!$specification instanceof SpecificationInterface) {
                 throw new \Exception("The specifications provided must implement SpecificationInterface!");

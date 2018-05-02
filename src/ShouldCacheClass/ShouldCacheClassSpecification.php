@@ -7,14 +7,15 @@ use Zend\Code\Reflection\ClassReflection;
 class ShouldCacheClassSpecification implements SpecificationInterface
 {
     /** @var  SpecificationInterface[] */
-    protected $specifications;
+    protected $specifications, $config;
 
     /**
      * @param SpecificationInterface[] $specifications
      */
-    public function __construct($specifications = array())
+    public function __construct($specifications = array(), $config = array())
     {
         $this->specifications = $specifications;
+        $this->config = $config;
     }
 
     public function isSatisfiedBy(ClassReflection $class)
