@@ -1,5 +1,5 @@
 {
-    "name": "bender/edp-superluminal",
+    "name": "ewilde-imperial/edp-superluminal",
     "description": "Modification of https://github.com/EvanDotPro/EdpSuperluminal to work with ZF3",
     "license": "BSD-3-Clause",
     "type": "library",
@@ -7,11 +7,20 @@
         "zendframework",
         "performance"
     ],
-    "homepage": "https://github.com/BenderBendingRodriges/EdpSuperluminal",
+    "homepage": "https://github.com/ewilde-imperial/EdpSuperluminal",
     "authors": [
+        {
+            "name": "Evan Coury",
+            "email": "me@evancoury.com",
+            "homepage": "http://blog.evan.pro/"
+        },
         {
             "name": "Kirill Timoszenko",
             "email": "mail@web-solution.pl"
+        },
+        {
+            "name": "Ed Wilde",
+            "email": "e.wilde@imperial.ac.uk"
         }
     ],
     "require": {
