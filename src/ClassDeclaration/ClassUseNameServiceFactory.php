@@ -2,7 +2,7 @@
 
 namespace EdpSuperluminal\ClassDeclaration;
 
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
 

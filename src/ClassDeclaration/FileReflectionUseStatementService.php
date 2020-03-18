@@ -2,7 +2,7 @@
 
 namespace EdpSuperluminal\ClassDeclaration;
 
-use Zend\Code\Reflection\FileReflection;
+use Laminas\Code\Reflection\FileReflection;
 
 class FileReflectionUseStatementService
 {

@@ -2,8 +2,8 @@
 
 namespace EdpSuperluminal;
 
-use Zend\Console\Request as ConsoleRequest;
-use Zend\Mvc\MvcEvent;
+use Laminas\Console\Request as ConsoleRequest;
+use Laminas\Mvc\MvcEvent;
 
 /**
  * Create a class cache of all classes used.
@@ -25,7 +25,7 @@ class Module
         $cacheBuilder = $serviceManager->get('EdpSuperluminal\CacheBuilder');
 
         $eventManager = $e->getApplication()->getEventManager()->getSharedManager();
-        $eventManager->attach('Zend\Mvc\Application', 'finish', function (MvcEvent $e) use ($cacheBuilder) {
+        $eventManager->attach('Laminas\Mvc\Application', 'finish', function (MvcEvent $e) use ($cacheBuilder) {
             $request = $e->getRequest();
 
             if ($request instanceof ConsoleRequest ||
@@ -39,7 +39,7 @@ class Module
 
     public function getAutoloaderConfig(){
         return array(
-            'Zend\Loader\StandardAutoloader' => array(
+            'Laminas\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
 //                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                     __NAMESPACE__ => __DIR__ . '/src/' ,

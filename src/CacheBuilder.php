@@ -3,8 +3,8 @@
 namespace EdpSuperluminal;
 
 use EdpSuperluminal\ShouldCacheClass\ShouldCacheClassSpecification;
-use Zend\Code\Reflection\ClassReflection;
-use Zend\Code\Scanner\FileScanner;
+use Laminas\Code\Reflection\ClassReflection;
+use Laminas\Code\Scanner\FileScanner;
 
 class CacheBuilder
 {

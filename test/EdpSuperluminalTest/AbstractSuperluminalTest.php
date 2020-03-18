@@ -5,9 +5,9 @@ namespace EdpSuperluminalTest;
 use EdpSuperluminal\ClassDeclaration\ClassDeclarationService;
 use EdpSuperluminal\ClassDeclaration\FileReflectionUseStatementService;
 use Phake;
-use Zend\Code\Reflection\ClassReflection;
-use Zend\Code\Reflection\FileReflection;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\FileReflection;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 abstract class AbstractSuperluminalTest extends \PHPUnit_Framework_TestCase
 {
@@ -42,15 +42,15 @@ abstract class AbstractSuperluminalTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->serviceLocator = Phake::mock('Zend\ServiceManager\ServiceLocatorInterface');
+        $this->serviceLocator = Phake::mock('Laminas\ServiceManager\ServiceLocatorInterface');
 
         $this->fileReflectionService = Phake::mock('EdpSuperluminal\ClassDeclaration\FileReflectionUseStatementService');
 
         $this->classDeclarationService = Phake::mock('EdpSuperluminal\ClassDeclaration\ClassDeclarationService');
 
-        $this->mockClassReflection = Phake::mock('Zend\Code\Reflection\ClassReflection');
+        $this->mockClassReflection = Phake::mock('Laminas\Code\Reflection\ClassReflection');
 
-        $this->mockFileReflection = Phake::mock('Zend\Code\Reflection\FileReflection');
+        $this->mockFileReflection = Phake::mock('Laminas\Code\Reflection\FileReflection');
 
         Phake::when($this->mockClassReflection)->getDeclaringFile()->thenReturn($this->mockFileReflection);
 

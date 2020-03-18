@@ -10,7 +10,7 @@ use EdpSuperluminal\ClassDeclaration\FileReflectionUseStatementService;
 use EdpSuperluminal\ClassDeclaration\InterfaceStatementService;
 use EdpSuperluminalTest\AbstractSuperluminalTest;
 use Phake;
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class ClassDeclarationTest extends AbstractSuperluminalTest
 {

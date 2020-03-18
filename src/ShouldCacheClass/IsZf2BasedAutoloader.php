@@ -2,7 +2,7 @@
 
 namespace EdpSuperluminal\ShouldCacheClass;
 
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class IsZf2BasedAutoloader implements SpecificationInterface
 {
@@ -13,6 +13,6 @@ class IsZf2BasedAutoloader implements SpecificationInterface
      */
     public function isSatisfiedBy(ClassReflection $class)
     {
-        return in_array('Zend\Loader\SplAutoloader', $class->getInterfaceNames());
+        return in_array('Laminas\Loader\SplAutoloader', $class->getInterfaceNames());
     }
 }

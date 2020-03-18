@@ -5,7 +5,7 @@ namespace EdpSuperluminalTest\ClassDeclaration;
 use EdpSuperluminal\ClassDeclaration\ClassTypeService;
 use EdpSuperluminalTest\AbstractSuperluminalTest;
 use Phake;
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class ClassTypeServiceTest extends AbstractSuperluminalTest
 {

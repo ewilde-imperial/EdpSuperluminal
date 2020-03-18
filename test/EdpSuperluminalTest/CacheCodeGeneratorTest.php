@@ -7,8 +7,8 @@ use EdpSuperluminal\CacheCodeGeneratorFactory;
 use EdpSuperluminal\ClassDeclaration\ClassDeclarationService;
 use EdpSuperluminal\ClassDeclaration\FileReflectionUseStatementService;
 use Phake;
-use Zend\Code\Reflection\ClassReflection;
-use Zend\Code\Reflection\FileReflection;
+use Laminas\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\FileReflection;
 
 class CacheCodeGeneratorTest extends AbstractSuperluminalTest
 {

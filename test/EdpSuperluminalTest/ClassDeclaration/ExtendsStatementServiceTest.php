@@ -6,8 +6,8 @@ use EdpSuperluminal\ClassDeclaration\ClassUseNameService;
 use EdpSuperluminal\ClassDeclaration\ExtendsStatementService;
 use EdpSuperluminalTest\AbstractSuperluminalTest;
 use Phake;
-use Zend\Code\Reflection\ClassReflection;
-use Zend\Code\Reflection\FileReflection;
+use Laminas\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\FileReflection;
 
 class ExtendsStatementServiceTest extends AbstractSuperluminalTest
 {
@@ -35,7 +35,7 @@ class ExtendsStatementServiceTest extends AbstractSuperluminalTest
 
     public function testExtendsAClass()
     {
-        $parent = Phake::mock('Zend\Code\Reflection\ClassReflection');
+        $parent = Phake::mock('Laminas\Code\Reflection\ClassReflection');
 
         Phake::when($this->mockClassReflection)->getParentClass()->thenReturn($parent);
 
@@ -50,18 +50,18 @@ class ExtendsStatementServiceTest extends AbstractSuperluminalTest
 
         $this->mockParent();
 
-        $this->assertEquals(' extends \Zend\ServiceManager\ServiceManager', $this->sut->getClassExtendsStatement($this->mockClassReflection));
+        $this->assertEquals(' extends \Laminas\ServiceManager\ServiceManager', $this->sut->getClassExtendsStatement($this->mockClassReflection));
     }
 
     protected function mockParent()
     {
-        $parent = Phake::mock('Zend\Code\Reflection\ClassReflection');
+        $parent = Phake::mock('Laminas\Code\Reflection\ClassReflection');
 
         Phake::when($this->mockClassReflection)->getParentClass()->thenReturn($parent);
 
-        Phake::when($this->classUseNameService)->getClassUseName()->thenReturn('Zend\ServiceManager\ServiceManager');
+        Phake::when($this->classUseNameService)->getClassUseName()->thenReturn('Laminas\ServiceManager\ServiceManager');
 
-        Phake::when($parent)->getName()->thenReturn('Zend\ServiceManager\ServiceManager');
+        Phake::when($parent)->getName()->thenReturn('Laminas\ServiceManager\ServiceManager');
 
         Phake::when($parent)->getShortName()->thenReturn('ServiceManager');
     }

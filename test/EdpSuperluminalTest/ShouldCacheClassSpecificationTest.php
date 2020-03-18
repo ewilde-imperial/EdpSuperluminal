@@ -5,7 +5,7 @@ namespace EdpSuperluminalTest;
 use EdpSuperluminal\ShouldCacheClass\ShouldCacheClassSpecification;
 use EdpSuperluminal\ShouldCacheClass\ShouldCacheClassSpecificationFactory;
 use Phake;
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class ShouldCacheClassSpecificationTest extends AbstractSuperluminalTest
 {

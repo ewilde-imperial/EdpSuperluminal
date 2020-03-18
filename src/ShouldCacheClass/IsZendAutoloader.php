@@ -2,7 +2,7 @@
 
 namespace EdpSuperluminal\ShouldCacheClass;
 
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class IsZendAutoloader implements SpecificationInterface
 {
@@ -15,7 +15,7 @@ class IsZendAutoloader implements SpecificationInterface
     {
         $className = $class->getName();
 
-        return $className === 'Zend\Loader\AutoloaderFactory'
-            || $className === 'Zend\Loader\SplAutoloader';
+        return $className === 'Laminas\Loader\AutoloaderFactory'
+            || $className === 'Laminas\Loader\SplAutoloader';
     }
 }

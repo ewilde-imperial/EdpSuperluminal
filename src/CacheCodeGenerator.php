@@ -4,7 +4,7 @@ namespace EdpSuperluminal;
 
 use EdpSuperluminal\ClassDeclaration\ClassDeclarationService;
 use EdpSuperluminal\ClassDeclaration\FileReflectionUseStatementService;
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class CacheCodeGenerator
 {
@@ -31,7 +31,7 @@ class CacheCodeGenerator
     /**
      * Generate code to cache from class reflection.
      *
-     * @todo maybe move some of this into Zend\Code
+     * @todo maybe move some of this into Laminas\Code
      *
      * @param  ClassReflection $classReflection
      * @return string
