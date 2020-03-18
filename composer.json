@@ -1,6 +1,6 @@
 {
     "name": "ewilde-imperial/edp-superluminal",
-    "description": "Modification of https://github.com/EvanDotPro/EdpSuperluminal to work with ZF3",
+    "description": "Modification of https://github.com/EvanDotPro/EdpSuperluminal to work with Laminas",
     "license": "BSD-3-Clause",
     "type": "library",
     "keywords": [
