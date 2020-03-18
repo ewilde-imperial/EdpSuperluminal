@@ -3,13 +3,13 @@ EdpSuperluminal
 
 Introduction
 ------------
-EdpSuperluminal is a ZF3 module that caches the Zend classes used by your
+EdpSuperluminal is a Laminas module that caches the Zend classes used by your
 application into a single file. Including this file greatly reduces the
 execution time of your application, as the calls to the standard autoloader are
 almost entirely eliminated.
 
 **Warning:** After installing and enabling this module, it may seem as though
-your ZF3 application is running faster than the speed of light (superluminal).
+your Laminas application is running faster than the speed of light (superluminal).
 Don't panic. This is just an illusion and no laws of physics are being violated.
 
 Installation
