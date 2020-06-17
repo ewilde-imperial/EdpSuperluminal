@@ -3,6 +3,7 @@
     "description": "Modification of https://github.com/EvanDotPro/EdpSuperluminal to work with Laminas",
     "license": "BSD-3-Clause",
     "type": "library",
+    "version": "2.0.0",
     "keywords": [
         "zendframework",
         "performance",
