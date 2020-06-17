@@ -53,7 +53,15 @@ class CacheBuilder
         } else {
             $code = "<?php\n";
         }
-        $classes = array_merge(get_declared_traits(),get_declared_interfaces(), get_declared_classes());
+
+        // put the classes in a consistent order
+        // this mitagates intermittent errors
+        // when different people build the class cache
+        $traits = sort(get_declared_traits());
+        $interfaces = sort(get_declared_interfaces());
+        $classes = sort(get_declared_classes());
+
+        $classes = array_merge($traits, $interfaces, $classes);
 
         // print_r($classes);die();
         foreach ($classes as $class) {
