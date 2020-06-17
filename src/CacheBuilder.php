@@ -57,9 +57,13 @@ class CacheBuilder
         // put the classes in a consistent order
         // this mitagates intermittent errors
         // when different people build the class cache
-        $traits = sort(get_declared_traits());
-        $interfaces = sort(get_declared_interfaces());
-        $classes = sort(get_declared_classes());
+        $traits = get_declared_traits();
+        $interfaces = get_declared_interfaces();
+        $classes = get_declared_classes();
+        sort($traits);
+        sort($interfaces);
+        sort($classes);
+
 
         $classes = array_merge($traits, $interfaces, $classes);
 
