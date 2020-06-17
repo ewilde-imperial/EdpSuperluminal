@@ -2,7 +2,7 @@
 
 namespace EdpSuperluminal\ClassDeclaration;
 
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class ExtendsStatementService
 {

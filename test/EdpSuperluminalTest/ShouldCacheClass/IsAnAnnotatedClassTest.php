@@ -3,7 +3,7 @@
 namespace EdpSuperluminalTest\ShouldCacheClass;
 
 use EdpSuperluminal\ShouldCacheClass\IsAnAnnotatedClass;
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class IsAnAnnotatedClassTest extends \PHPUnit_Framework_TestCase
 {

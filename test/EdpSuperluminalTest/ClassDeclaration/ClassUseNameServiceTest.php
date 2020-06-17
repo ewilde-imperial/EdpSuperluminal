@@ -7,8 +7,8 @@ use EdpSuperluminal\ClassDeclaration\ClassUseNameServiceFactory;
 use EdpSuperluminal\ClassDeclaration\FileReflectionUseStatementService;
 use EdpSuperluminalTest\AbstractSuperluminalTest;
 use Phake;
-use Zend\Code\Reflection\ClassReflection;
-use Zend\Code\Reflection\FileReflection;
+use Laminas\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\FileReflection;
 
 class ClassUseNameServiceTest extends AbstractSuperluminalTest
 {
@@ -26,9 +26,9 @@ class ClassUseNameServiceTest extends AbstractSuperluminalTest
 
     public function testAClassWhichHasBeenUsed()
     {
-        $useClass = Phake::mock('Zend\Code\Reflection\ClassReflection');
+        $useClass = Phake::mock('Laminas\Code\Reflection\ClassReflection');
 
-        $useClassFqn = 'Zend\ServiceManager\ServiceManager';
+        $useClassFqn = 'Laminas\ServiceManager\ServiceManager';
 
         Phake::when($this->useStatementService)->getUseNames(Phake::anyParameters())->thenReturn(array($useClassFqn => null));
 
@@ -40,9 +40,9 @@ class ClassUseNameServiceTest extends AbstractSuperluminalTest
 
     public function testAClassWhichHasBeenUsedAsSomethingElse()
     {
-        $useClass = Phake::mock('Zend\Code\Reflection\ClassReflection');
+        $useClass = Phake::mock('Laminas\Code\Reflection\ClassReflection');
 
-        $useClassFqn = 'Zend\ServiceManager\ServiceManager';
+        $useClassFqn = 'Laminas\ServiceManager\ServiceManager';
 
         Phake::when($this->useStatementService)->getUseNames(Phake::anyParameters())->thenReturn(array($useClassFqn => 'MyServiceManager'));
 
@@ -54,11 +54,11 @@ class ClassUseNameServiceTest extends AbstractSuperluminalTest
 
     public function testAClassWhichHasNotBeenUsedAndHasTheSameNamespace()
     {
-        $useClass = Phake::mock('Zend\Code\Reflection\ClassReflection');
+        $useClass = Phake::mock('Laminas\Code\Reflection\ClassReflection');
 
-        $useClassFqn = 'Zend\ServiceManager\ServiceManager';
+        $useClassFqn = 'Laminas\ServiceManager\ServiceManager';
 
-        Phake::when($this->mockClassReflection)->getNamespaceName()->thenReturn('Zend\ServiceManager');
+        Phake::when($this->mockClassReflection)->getNamespaceName()->thenReturn('Laminas\ServiceManager');
         Phake::when($useClass)->getName()->thenReturn($useClassFqn);
         Phake::when($useClass)->getShortName()->thenReturn('ServiceManager');
 
@@ -67,14 +67,14 @@ class ClassUseNameServiceTest extends AbstractSuperluminalTest
 
     public function testAClassWhichHasNotBeenUsedAndHasADifferentNamespace()
     {
-        $useClass = Phake::mock('Zend\Code\Reflection\ClassReflection');
+        $useClass = Phake::mock('Laminas\Code\Reflection\ClassReflection');
 
-        $useClassFqn = 'Zend\ServiceManager\ServiceManager';
+        $useClassFqn = 'Laminas\ServiceManager\ServiceManager';
 
-        Phake::when($this->mockClassReflection)->getNamespaceName()->thenReturn('Zend\Server');
+        Phake::when($this->mockClassReflection)->getNamespaceName()->thenReturn('Laminas\Server');
         Phake::when($useClass)->getName()->thenReturn($useClassFqn);
         Phake::when($useClass)->getShortName()->thenReturn('ServiceManager');
 
-        $this->assertEquals('\Zend\ServiceManager\ServiceManager', $this->sut->getClassUseName($this->mockClassReflection, $useClass));
+        $this->assertEquals('\Laminas\ServiceManager\ServiceManager', $this->sut->getClassUseName($this->mockClassReflection, $useClass));
     }
 }

@@ -7,8 +7,8 @@ use EdpSuperluminal\ClassDeclaration\ExtendsStatementService;
 use EdpSuperluminal\ClassDeclaration\InterfaceStatementService;
 use EdpSuperluminalTest\AbstractSuperluminalTest;
 use Phake;
-use Zend\Code\Reflection\ClassReflection;
-use Zend\Code\Reflection\FileReflection;
+use Laminas\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\FileReflection;
 
 class InterfaceStatementServiceTest extends AbstractSuperluminalTest
 {

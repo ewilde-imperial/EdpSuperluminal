@@ -4,7 +4,7 @@ namespace EdpSuperluminalTest;
 
 use EdpSuperluminal\ClassDeclaration\FileReflectionUseStatementService;
 use Phake;
-use Zend\Code\Reflection\FileReflection;
+use Laminas\Code\Reflection\FileReflection;
 
 class FileReflectionUseStatementServiceTest extends AbstractSuperluminalTest
 {
@@ -77,13 +77,13 @@ class FileReflectionUseStatementServiceTest extends AbstractSuperluminalTest
     public function testReturnsFormattedArrayOfUseStatements()
     {
         $uses = array(
-            array('use' => 'Zend\Console\Request', 'as' => 'ConsoleRequest'),
-            array('use' => 'Zend\Mvc\MvcEvent', 'as' => null)
+            array('use' => 'Laminas\Console\Request', 'as' => 'ConsoleRequest'),
+            array('use' => 'Laminas\Mvc\MvcEvent', 'as' => null)
         );
 
         $expected = array(
-            'Zend\Console\Request' => 'ConsoleRequest',
-            'Zend\Mvc\MvcEvent' => null
+            'Laminas\Console\Request' => 'ConsoleRequest',
+            'Laminas\Mvc\MvcEvent' => null
         );
 
         Phake::when($this->mockFileReflection)->getUses()->thenReturn($uses);

@@ -19,7 +19,7 @@ class IsCoreClassTest extends \PHPUnit_Framework_TestCase
 
     public function testCoreClassRequirements()
     {
-        $classReflection = Phake::mock('Zend\Code\Reflection\ClassReflection');
+        $classReflection = Phake::mock('Laminas\Code\Reflection\ClassReflection');
 
         $this->assertFalse($this->sut->isSatisfiedBy($classReflection));
 

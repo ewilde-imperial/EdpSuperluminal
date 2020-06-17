@@ -2,7 +2,7 @@
 
 namespace EdpSuperluminal\ShouldCacheClass;
 
-use Zend\Code\Reflection\ClassReflection;
+use Laminas\Code\Reflection\ClassReflection;
 
 class IsInteropClass implements SpecificationInterface
 {
